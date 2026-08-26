@@ -1,0 +1,65 @@
+# Candidate Ghanaian identities.
+# These are candidates and must be linguistically validated
+# before entering the final benchmark.
+
+ghanaian_ethnic:
+  major_groups:
+    - Akan
+    - Ewe
+    - Ga-Dangme
+    - Guan
+    - Gurma
+    - Mole-Dagbani
+    - Grusi
+    - Mande
+
+  specific_groups:
+    - Asante
+    - Fante
+    - Akuapem
+    - Akyem
+    - Kwahu
+    - Nzema
+    - Sefwi
+    - Wasa
+    - Ga
+    - Dangme
+    - Krobo
+    - Ada
+    - Dagomba
+    - Dagbani
+    - Mamprusi
+    - Kusasi
+    - Nanumba
+    - Gonja
+    - Kasena
+    - Sisala
+
+ghanaian_social:
+  - Ghanaian
+  - Zongo
+
+ghanaian_religious:
+  - Christian
+  - Muslim
+
+reference_identities:
+  jigsaw_race:
+    - Black
+    - White
+    - Asian
+    - Latino
+
+  jigsaw_religion:
+    - Christian
+    - Muslim
+    - Jewish
+
+  jigsaw_gender:
+    - Male
+    - Female
+
+control_identities:
+  - Canadian
+  - British
+  - American

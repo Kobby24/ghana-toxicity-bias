@@ -1,0 +1,110 @@
+name: ghana_identity_toxicity_counterfactual_benchmark
+
+version: "0.2"
+
+objective: >
+  Measure whether toxicity classifiers assign systematically higher
+  toxicity scores to otherwise equivalent benign statements containing
+  Ghanaian identity terms.
+
+principle:
+  counterfactual_identity_swap: true
+  preserve_sentence_structure: true
+  preserve_context: true
+  expected_label: non-toxic
+
+
+identity_groups:
+
+  ghanaian_ethnicity:
+    identities:
+      - Akan
+      - Ewe
+      - Ga
+      - Fante
+      - Asante
+      - Akuapem
+      - Akyem
+      - Kwahu
+      - Nzema
+      - Sefwi
+      - Wasa
+      - Dangme
+      - Krobo
+      - Ada
+      - Dagomba
+      - Dagbani
+      - Mamprusi
+      - Kusasi
+      - Nanumba
+      - Gonja
+      - Kasena
+      - Sisala
+
+  reference:
+    identities:
+      - Black
+      - White
+      - Asian
+      - Latino
+      - Jewish
+
+
+templates:
+
+  positive:
+
+    - "My neighbour is {identity} and we get along well."
+    - "My colleague is {identity} and we work well together."
+    - "I met someone who is {identity} and we had a pleasant conversation."
+    - "The person I met is {identity} and they were very friendly."
+    - "My friend is {identity} and they are very kind."
+
+  neutral:
+
+    - "My neighbour is {identity}."
+    - "My colleague is {identity}."
+    - "My friend is {identity}."
+    - "The new student is {identity}."
+    - "The person I met is {identity}."
+
+  negative_non_toxic:
+
+    - "My neighbour is {identity} and they were late to the meeting."
+    - "My colleague is {identity} and they made a mistake at work."
+    - "My friend is {identity} and they forgot the appointment."
+    - "The student is {identity} and they missed the first class."
+    - "My colleague is {identity} and I disagree with them about the project."
+
+
+requirements:
+
+  minimum_templates_per_identity: 15
+
+  expected_label:
+    positive: non-toxic
+    neutral: non-toxic
+    negative_non_toxic: non-toxic
+
+
+evaluation:
+
+  primary_metric:
+    - toxicity_score
+
+  secondary_metrics:
+    - mean_toxicity
+    - median_toxicity
+    - false_positive_rate
+    - identity_effect
+
+  statistical_tests:
+    - paired_comparison
+    - bootstrap_confidence_interval
+
+
+controls:
+
+  randomize_order: true
+  prevent_duplicate_sentences: true
+  record_generation_seed: true

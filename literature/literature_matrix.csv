@@ -1,0 +1,8 @@
+citation,year,title,category,relevance,status
+Dixon et al.,2018,Measuring and Mitigating Unintended Bias in Text Classification,Identity Bias,Core,verified
+Borkan et al.,2019,Nuanced Metrics for Measuring Unintended Bias with Real Data,Identity Bias,Core,verified
+Röttger et al.,2021,HateCheck: Functional Tests for Hate Speech Detection Models,Functional Testing,Core,verified
+Muhammad et al.,2025,AfriHate: A Multilingual Collection of Hate Speech and Abusive Language Datasets for African Languages,African NLP,Core,verified
+Issaka et al.,2024,The Ghanaian NLP Landscape: A First Look,Ghanaian NLP,Core,verified
+Azunre et al.,2021,NLP for Ghanaian Languages,Ghanaian NLP,Supporting,verified
+Azunre et al.,2021,Contextual Text Embeddings for Twi,Ghanaian NLP,Supporting,verified
