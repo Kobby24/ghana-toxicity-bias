@@ -1,0 +1,22 @@
+# Python 3.12 (the notebook was run on 3.12.1).
+# Versions marked "recorded" are the exact versions printed in the committed
+# notebook output. pandas and pyyaml were not recorded, so they use lower bounds.
+
+pandas>=2.2
+pyyaml>=6.0
+
+# --- model evaluation + statistics (notebooks/03_model_evaluation.ipynb) ---
+numpy==2.5.2            # recorded
+scipy==1.18.1           # recorded
+matplotlib==3.11.1      # recorded
+torch==2.13.0           # recorded
+transformers==5.15.1    # recorded
+tqdm>=4.66
+ipywidgets>=8.0        
+
+# --- running the notebook ---
+jupyterlab>=4.0
+ipykernel>=6.29
+
+# --- downloading the raw datasets from Kaggle (see README) ---
+kaggle>=1.6
